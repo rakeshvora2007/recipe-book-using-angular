@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-app';
+
+  selected = 'recipe';
+
+  onNavChange = (value:string) => {
+    this.selected = value;
+    console.log(value);
+  }
+  
 }
