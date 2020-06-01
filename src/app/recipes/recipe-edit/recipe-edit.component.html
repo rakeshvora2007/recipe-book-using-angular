@@ -1,1 +1,6 @@
-<p>recipe-edit works!</p>
+<div *ngIf="editMode">
+  <p>In Edit Mode</p>
+</div>
+<div *ngIf="!editMode">
+  <p>New Add Mode</p>
+</div>
