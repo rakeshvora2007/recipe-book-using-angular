@@ -32,5 +32,8 @@ export class RecipeService {
     this.slService.addIngredients(ingredients);
   }
 
-  addRecipe() {}
+  selectBasedOnIndex(index: number) {
+    // this.recipeSelected.emit(this.recipes[index]);
+    return this.recipes.slice()[index];
+  }
 }
