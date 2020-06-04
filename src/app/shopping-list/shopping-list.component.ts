@@ -21,4 +21,8 @@ export class ShoppingListComponent implements OnInit {
     });
   }
 
+  onSelect(index: number) {
+    this.slService.selectIngredient(index);
+  }
+
 }
