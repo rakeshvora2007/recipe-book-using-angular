@@ -1,6 +1,41 @@
-<div *ngIf="editMode">
-  <p>In Edit Mode</p>
-</div>
-<div *ngIf="!editMode">
-  <p>New Add Mode</p>
+<div class="row">
+  <div class="col-xs-12">
+    <form>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" type="submit">Save</button>
+          <button class="btn btn-danger" type="button">Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="imagePath">Name</label>
+              <input type="text" id="imagePath" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+          <img src="" alt="" class="img-responsive">
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" class="form-control">
+                </div>
+              </div>
+            </div>
+    </form>
+  </div>
 </div>
