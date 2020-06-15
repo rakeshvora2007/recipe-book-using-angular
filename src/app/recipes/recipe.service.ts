@@ -9,6 +9,7 @@ export class RecipeService {
   constructor(private slService: ShoppingListService) {}
 
   recipeSelected = new Subject<Recipe>();
+  newRecipes = new Subject<Recipe[]>();
 
   private recipes: Recipe[] = [
     new Recipe(
@@ -34,7 +35,16 @@ export class RecipeService {
   }
 
   selectBasedOnIndex(index: number) {
-    // this.recipeSelected.emit(this.recipes[index]);
     return this.recipes.slice()[index];
+  }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+    this.newRecipes.next(this.recipes.slice());
+  }
+
+  updateRecipe(index: number, newRecipe: Recipe) {
+    this.recipes[index] = newRecipe;
+    this.newRecipes.next(this.recipes.slice());
   }
 }
